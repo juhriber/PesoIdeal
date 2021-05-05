@@ -19,38 +19,26 @@ namespace PesoIdeal
 
             Console.Write("Digite seu sexo: ");
             sexo = Console.ReadLine();
-            if (sexo == "M")
+            Console.WriteLine();
+
+            if (sexo.ToUpper() == "M" || sexo.ToUpper() == "MASCULINO")
             {
-                Console.WriteLine();
                 Console.Write("Seu peso ideal é: ");
                 Console.WriteLine($"{Math.Round(pesoM, 1)}kg");
-                Console.WriteLine("Pressione ENTER para sair!");
-                Console.ReadKey();
             }
-            if (sexo == "Masculino")
+            else if (sexo.ToUpper() == "F" || sexo.ToUpper() == "FEMININO")
             {
-                Console.WriteLine();
-                Console.Write("Seu peso ideal é: ");
-                Console.WriteLine($"{Math.Round(pesoM, 1)}kg");
-                Console.WriteLine("Pressione ENTER para sair!");
-                Console.ReadKey();
-            }
-            if (sexo == "F")
-            {
-                Console.WriteLine();
                 Console.Write("Seu peso ideal é: ");
                 Console.WriteLine($"{Math.Round(pesoF, 1)}kg");
-                Console.WriteLine("Pressione ENTER para sair!");
-                Console.ReadKey();
             }
-            if (sexo == "Feminino")
+            else
             {
-                Console.WriteLine();
-                Console.Write("Seu peso ideal é: ");
-                Console.WriteLine($"{Math.Round(pesoF, 1)}kg");
-                Console.WriteLine("Pressione ENTER para sair!");
-                Console.ReadKey();
+                Console.WriteLine("Seu sexo não foi identificado. Tente novamente.");
             }
+
+            Console.WriteLine();
+            Console.WriteLine("Pressione ENTER para sair!");
+            Console.ReadKey();
         }
     }
 }
